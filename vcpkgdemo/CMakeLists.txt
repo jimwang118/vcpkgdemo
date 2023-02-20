@@ -19,4 +19,4 @@ install(TARGETS vcpkgdemo
 		RUNTIME DESTINATION bin
 )
 
-install(EXPOET vcpkgdemoConfig DESTINATION share/vcpkgdemo)
+install(EXPORT vcpkgdemoConfig DESTINATION share/vcpkgdemo)
