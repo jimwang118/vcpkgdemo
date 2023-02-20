@@ -1,20 +1,9 @@
-﻿# CMakeList.txt : CMake project for vcpkgdemo, include source and define
-# project specific logic here.
+﻿# CMakeList.txt : Top-level CMake project file, do global configuration
+# and include sub-projects here.
 #
+cmake_minimum_required (VERSION 3.8)
 
-# Add source to this project's executable.
-add_library (vcpkgdemo "vcpkgdemo.cpp" "vcpkgdemo.h")
+project ("vcpkgdemo")
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET vcpkgdemo PROPERTY CXX_STANDARD 20)
-endif()
-
-# TODO: Add tests and install targets if needed.
-install(FILES "${CMAKE_CURRENT_LIST_DIR}/vcpkgdemo.h" DESTINATION "include")
-
-install(TARGETS vcpkgdemo
-        EXPORT vcpkgdemo-config
-		ARCHIVE DESTINATION lib
-		LIBRARY DESTINATION lib
-		RUNTIME DESTINATION bin
-)
+# Include sub-projects.
+add_subdirectory ("vcpkgdemo")
