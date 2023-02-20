@@ -13,8 +13,10 @@ endif()
 install(FILES "${CMAKE_CURRENT_LIST_DIR}/vcpkgdemo.h" DESTINATION "include")
 
 install(TARGETS vcpkgdemo
-        EXPORT vcpkgdemo-config
+        EXPORT vcpkgdemoConfig
 		ARCHIVE DESTINATION lib
 		LIBRARY DESTINATION lib
 		RUNTIME DESTINATION bin
 )
+
+install(EXPOET vcpkgdemoConfig DESTINATION share/vcpkgdemo)
