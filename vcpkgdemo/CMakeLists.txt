@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-add_library (vcpkgdemo "vcpkgdemo.cpp" "vcpkgdemo.h")
+add_library (vcpkgdemo STATIC "vcpkgdemo.cpp" "vcpkgdemo.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET vcpkgdemo PROPERTY CXX_STANDARD 20)
