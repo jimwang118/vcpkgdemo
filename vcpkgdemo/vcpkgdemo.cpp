@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main()
+int maintest()
 {
 	char str[1024] = "test vcpkg demo";
 	output(str);
